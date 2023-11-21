@@ -1,0 +1,31 @@
+name: 'BattleNet-Profile-Exporter'
+description: 'Exports the information of the specified users Battle.net WoW profile'
+author: 'QuantumPie'
+
+# Define your inputs here.
+inputs:
+    client_id:
+        description: 'Battle.net API Client ID'
+        required: true
+    client_secret:
+        description: 'Battle.net API Client Secret'
+        required: true
+    region:
+        description: 'WoW region the character resides on'
+        required: true
+        default: 'us'
+    realm:
+        description: 'WoW realm the character resides on'
+        required: true
+    name:
+        description: 'Name of the character to obtain profile information for'
+        required: true
+
+# Define your outputs here.
+outputs:
+    json:
+        description: 'Obtained information from Battle.net API'
+
+runs:
+    using: node20
+    main: dist/index.js
