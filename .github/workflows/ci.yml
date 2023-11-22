@@ -47,7 +47,7 @@ jobs:
 
             - name: Install Dependencies
               id: npm-ci
-              run: pnpm ci
+              run: pnpm i
 
             - name: Check Format
               id: npm-format-check
